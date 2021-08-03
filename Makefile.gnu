@@ -24,16 +24,16 @@ prompted_mpi_integration: prompted_mpi_integration.o
 prompted_mpi_integration.o: prompted_mpi_integration.c
 	$(CC) $(CFLAGS) -c prompted_mpi_integration.c
 
-print_sin:
+print_sin: print_sin.c
 	$(CC) $(CFLAGS) -o print_sin print_sin.c -lm
 
-thread_multiple_with_thread:
+thread_multiple_with_thread: thread_multiple_with_thread.cpp
 	$(CXX) $(CXXFLAGS) -openmp -o thread_multiple_with_thread thread_multiple_with_thread.cpp
 
-thread_multiple_no_thread:
+thread_multiple_no_thread: thread_multiple_no_thread.cpp
 	$(CXX) $(CXXFLAGS) -openmp -o thread_multiple_no_thread thread_multiple_no_thread.cpp
 
-ioda:
+ioda: ioda.c
 	$(CC) $(CFLAGS) -o ioda ioda.c
 
 clean:
